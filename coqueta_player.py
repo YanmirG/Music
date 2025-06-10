@@ -41,7 +41,7 @@ letra = [
 # Lista de tuplas: (línea, tiempo en segundos desde el inicio)
 sync_letra = [
     ("Pensando y viendo las estrellas, pregunté", 0),
-    ("Si, en algún lugar, esto se estaría repitiendo", 3),
+    ("Si, en algún lugar, esto se estaría repitiendo", 4),
     ("Si es que, en otro mundo, tal vez nos ganó el deseo", 7),
     ("O si solo fuimos un error del universo", 11),
     ("", 13),
@@ -53,18 +53,18 @@ sync_letra = [
     ("", 36),
     ("Coqueta", 38),
     ("Si me quieres, solo di la neta", 41),
-    ("Que se entere todito el planeta", 46),
-    ("Chula, ya decide qué onda, nena", 50),
-    ("Qué onda, nena", 51),
-    ("", 52),
-    ("Coqueta", 53),
+    ("Que se entere todito el planeta", 44),
+    ("Chula, ya decide qué onda, nena", 47),
+    ("Qué onda, nena", 48),
+    ("", 51),
+    ("Coqueta", 52),
     ("Si me quieres, solo di la neta", 54),
     ("Que se entere todito el planeta", 56),
-    ("Chula, ya decide qué onda, nena", 60),
-    ("Qué onda, nena", 63),
-    ("", 64),
-    ("Dame, dame un besito, mami", 65),
-    ("Dale, ¿cómo no quieres que me clave?", 68)
+    ("Chula, ya decide qué onda, nena", 58),
+    ("Qué onda, nena", 59),
+    ("", 63),
+    ("Dame, dame un besito, mami", 64),
+    ("Dale, ¿cómo no quieres que me clave?", 67)
 ]
 
 def mostrar_karaoke(letra, delay=4):
