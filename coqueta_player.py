@@ -1,8 +1,6 @@
 import os
 import sys
 from colorama import init, Fore, Style
-from pydub import AudioSegment
-from pydub.playback import _play_with_simpleaudio
 import pygame
 
 init(autoreset=True)
