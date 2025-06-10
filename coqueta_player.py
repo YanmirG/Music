@@ -84,6 +84,7 @@ def mostrar_karaoke(letra, delay=4):
 
 def mostrar_karaoke_sincronizado(sync_letra):
     import time
+    import sys
     colores = [Fore.RED, Fore.GREEN, Fore.YELLOW, Fore.CYAN, Fore.MAGENTA]
     start = time.time()
     for i, (linea, t_obj) in enumerate(sync_letra):
@@ -92,7 +93,12 @@ def mostrar_karaoke_sincronizado(sync_letra):
         wait = t_obj - (now - start)
         if wait > 0:
             time.sleep(wait)
-        print(color + linea + Style.RESET_ALL)
+        # Efecto: mostrar la línea letra por letra
+        for j in range(1, len(linea)+1):
+            sys.stdout.write('\r' + color + linea[:j] + Style.RESET_ALL)
+            sys.stdout.flush()
+            time.sleep(0.05)  # velocidad de aparición de cada letra
+        print()  # salto de línea después de cada frase
 
 
 if not os.path.exists(mp3_file):
