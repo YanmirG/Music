@@ -1,17 +1,13 @@
 import os
 import sys
 from colorama import init, Fore, Style
+from pydub import AudioSegment
+from pydub.playback import _play_with_simpleaudio
+import pygame
 
 init(autoreset=True)
 
 print("\nReproduciendo: 'Coqueta' - Grupo Frontera\n")
-
-try:
-    from playsound import playsound
-except ImportError:
-    print("Instalando dependencia 'playsound'...")
-    os.system(f'"{sys.executable}" -m pip install playsound')
-    from playsound import playsound
 
 mp3_file = os.path.join(os.path.dirname(__file__), 'coqueta.mp3')
 
@@ -88,11 +84,18 @@ if not os.path.exists(mp3_file):
 else:
     try:
         import threading
-        # Iniciar la reproducción en un hilo separado
-        t = threading.Thread(target=playsound, args=(mp3_file,))
-        t.start()
-        mostrar_karaoke(letra)
-        t.join()
+        import time
+        # Inicializar pygame mixer
+        pygame.mixer.init()
+        pygame.mixer.music.load(mp3_file)
+        pygame.mixer.music.play()
+        # Lanzar karaoke y detener música a los 45 segundos
+        karaoke_thread = threading.Thread(target=mostrar_karaoke, args=(letra,))
+        karaoke_thread.start()
+        time.sleep(45)
+        pygame.mixer.music.stop()
+        karaoke_thread.join()
+        print("\nMúsica detenida tras 45 segundos.\n")
     except Exception as e:
         print(f"Error al reproducir la canción: {e}")
 
