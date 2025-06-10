@@ -52,7 +52,7 @@ sync_letra = [
     ("Quiero confesarte, te extraño, como un loco, te pienso, yo sé que tú también", 34),
     ("", 36),
     ("Coqueta", 38),
-    ("Si me quieres, solo di la neta", 41),
+    ("Si me quieres, solo di la neta", 40),
     ("Que se entere todito el planeta", 44),
     ("Chula, ya decide qué onda, nena", 47),
     ("Qué onda, nena", 48),
@@ -61,7 +61,7 @@ sync_letra = [
     ("Si me quieres, solo di la neta", 53),
     ("Que se entere todito el planeta", 56),
     ("Chula, ya decide qué onda, nena", 58),
-    ("Qué onda, nena", 59),
+    ("Qué onda, nena", 60),
     ("", 63),
     ("Dame, dame un besito, mami", 64),
     ("Dale, ¿cómo no quieres que me clave?", 67)
