@@ -44,7 +44,7 @@ letra = [
     "Dale, ¿cómo no quieres que me clave?"
 ]
 
-def mostrar_karaoke(letra, delay=3):
+def mostrar_karaoke(letra, delay=4):
     import time
     import threading
     try:
@@ -74,7 +74,13 @@ def mostrar_karaoke(letra, delay=3):
             break
         color = colores[i % len(colores)]
         print(color + linea + Style.RESET_ALL)
-        time.sleep(delay)
+        # Delay personalizado
+        if i == 19:
+            time.sleep(5)
+        elif i >= 30:
+            time.sleep(4)
+        else:
+            time.sleep(delay)
     stop_event.set()
 
 if not os.path.exists(mp3_file):
