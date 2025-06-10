@@ -47,24 +47,24 @@ sync_letra = [
     ("", 13),
     ("Baby, bésame", 14),
     ("Quiero que vuelvas a mis brazos pa' sentirnos eternos como la última vez", 15),
-    ("Quiero confesarte, te extraño, como un loco, te pienso, yo sé que tú también", 19),
+    ("Quiero confesarte, te extraño, como un loco, te pienso, yo sé que tú también", 20),
     ("Porfa, ma, ya vuelve conmigo, pero no como amigos como la última vez", 28),
-    ("Quiero confesarte, te extraño, como un loco, te pienso, yo sé que tú también", 35),
+    ("Quiero confesarte, te extraño, como un loco, te pienso, yo sé que tú también", 34),
     ("", 36),
     ("Coqueta", 37),
     ("Si me quieres, solo di la neta", 39),
-    ("Que se entere todito el planeta", 46),
-    ("Chula, ya decide qué onda, nena", 49),
+    ("Que se entere todito el planeta", 41),
+    ("Chula, ya decide qué onda, nena", 46),
     ("Qué onda, nena", 51),
     ("", 52),
     ("Coqueta", 53),
     ("Si me quieres, solo di la neta", 55),
-    ("Que se entere todito el planeta", 58),
+    ("Que se entere todito el planeta", 57),
     ("Chula, ya decide qué onda, nena", 62),
-    ("Qué onda, nena", 64),
-    ("", 65),
-    ("Dame, dame un besito, mami", 67),
-    ("Dale, ¿cómo no quieres que me clave?", 72)
+    ("Qué onda, nena", 63),
+    ("", 64),
+    ("Dame, dame un besito, mami", 65),
+    ("Dale, ¿cómo no quieres que me clave?", 68)
 ]
 
 def mostrar_karaoke(letra, delay=4):
