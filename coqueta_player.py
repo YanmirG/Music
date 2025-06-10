@@ -69,32 +69,8 @@ sync_letra = [
 
 def mostrar_karaoke(letra, delay=4):
     import time
-    import threading
-    try:
-        import msvcrt
-        usar_msvcrt = True
-    except ImportError:
-        usar_msvcrt = False
-    print("\nPresiona 'q' y luego ENTER para salir del karaoke...\n")
-    stop_event = threading.Event()
-    def check_quit():
-        if usar_msvcrt:
-            while not stop_event.is_set():
-                if msvcrt.kbhit() and msvcrt.getch().lower() == b'q':
-                    stop_event.set()
-                    break
-        else:
-            while not stop_event.is_set():
-                if input().strip().lower() == 'q':
-                    stop_event.set()
-                    break
-    t_quit = threading.Thread(target=check_quit, daemon=True)
-    t_quit.start()
     colores = [Fore.RED, Fore.GREEN, Fore.YELLOW, Fore.CYAN, Fore.MAGENTA]
     for i, linea in enumerate(letra):
-        if stop_event.is_set():
-            print("\nKaraoke detenido por el usuario.\n")
-            break
         color = colores[i % len(colores)]
         print(color + linea + Style.RESET_ALL)
         # Delay personalizado
@@ -104,44 +80,20 @@ def mostrar_karaoke(letra, delay=4):
             time.sleep(4)
         else:
             time.sleep(delay)
-    stop_event.set()
+
 
 def mostrar_karaoke_sincronizado(sync_letra):
     import time
-    import threading
-    try:
-        import msvcrt
-        usar_msvcrt = True
-    except ImportError:
-        usar_msvcrt = False
-    print("\nPresiona 'q' y luego ENTER para salir del karaoke...\n")
-    stop_event = threading.Event()
-    def check_quit():
-        if usar_msvcrt:
-            while not stop_event.is_set():
-                if msvcrt.kbhit() and msvcrt.getch().lower() == b'q':
-                    stop_event.set()
-                    break
-        else:
-            while not stop_event.is_set():
-                if input().strip().lower() == 'q':
-                    stop_event.set()
-                    break
-    t_quit = threading.Thread(target=check_quit, daemon=True)
-    t_quit.start()
     colores = [Fore.RED, Fore.GREEN, Fore.YELLOW, Fore.CYAN, Fore.MAGENTA]
     start = time.time()
     for i, (linea, t_obj) in enumerate(sync_letra):
-        if stop_event.is_set():
-            print("\nKaraoke detenido por el usuario.\n")
-            break
         color = colores[i % len(colores)]
         now = time.time()
         wait = t_obj - (now - start)
         if wait > 0:
             time.sleep(wait)
         print(color + linea + Style.RESET_ALL)
-    stop_event.set()
+
 
 if not os.path.exists(mp3_file):
     print("No se encontró el archivo 'coqueta.mp3'. Por favor, colócalo en la misma carpeta que este script.")
