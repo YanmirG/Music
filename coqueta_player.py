@@ -98,7 +98,7 @@ def mostrar_karaoke_sincronizado(sync_letra):
             sys.stdout.write('\r' + color + linea[:j] + Style.RESET_ALL)
             sys.stdout.flush()
             time.sleep(0.05)  # velocidad de aparición de cada letra
-        print()  # salto de línea después de cada frase
+        print()  # salto de línea después de cada frase.
 
 
 if not os.path.exists(mp3_file):
