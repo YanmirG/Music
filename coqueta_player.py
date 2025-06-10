@@ -153,13 +153,13 @@ else:
         pygame.mixer.init()
         pygame.mixer.music.load(mp3_file)
         pygame.mixer.music.play()
-        # Lanzar karaoke sincronizado y detener música a los 45 segundos
+        # Lanzar karaoke sincronizado y detener música a los 70 segundos
         karaoke_thread = threading.Thread(target=mostrar_karaoke_sincronizado, args=(sync_letra,))
         karaoke_thread.start()
-        time.sleep(45)
+        time.sleep(70)
         pygame.mixer.music.stop()
         karaoke_thread.join()
-        print("\nMúsica detenida tras 45 segundos.\n")
+        print("\nMúsica detenida tras 1 minuto y 10 segundos.\n")
     except Exception as e:
         print(f"Error al reproducir la canción: {e}")
 
