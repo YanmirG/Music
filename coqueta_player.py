@@ -53,18 +53,18 @@ sync_letra = [
     ("", 36),
     ("Coqueta", 37),
     ("Si me quieres, solo di la neta", 39),
-    ("Que se entere todito el planeta", 41),
-    ("Chula, ya decide qué onda, nena", 43),
-    ("Qué onda, nena", 45),
-    ("", 47),
-    ("Coqueta", 48),
-    ("Si me quieres, solo di la neta", 49),
-    ("Que se entere todito el planeta", 51),
-    ("Chula, ya decide qué onda, nena", 53),
-    ("Qué onda, nena", 55),
-    ("", 56),
-    ("Dame, dame un besito, mami", 58),
-    ("Dale, ¿cómo no quieres que me clave?", 60)
+    ("Que se entere todito el planeta", 46),
+    ("Chula, ya decide qué onda, nena", 49),
+    ("Qué onda, nena", 51),
+    ("", 52),
+    ("Coqueta", 53),
+    ("Si me quieres, solo di la neta", 55),
+    ("Que se entere todito el planeta", 58),
+    ("Chula, ya decide qué onda, nena", 62),
+    ("Qué onda, nena", 64),
+    ("", 65),
+    ("Dame, dame un besito, mami", 67),
+    ("Dale, ¿cómo no quieres que me clave?", 72)
 ]
 
 def mostrar_karaoke(letra, delay=4):
